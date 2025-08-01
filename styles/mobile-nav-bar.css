@@ -1,0 +1,36 @@
+.mobile-nav-bar {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  background-color: white;
+  height: 55px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* border-top: 1px solid rgb(195, 190, 190); */
+  box-shadow: 0 -2px 2px rgb(232, 227, 227);
+}
+
+.mobile-nav-bar img {
+  width: 26px;
+  height: 26px;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .mobile-nav-bar {
+    /* display: block; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .profile-mobile {
+    border-radius: 50%;
+  }
+
+  .pins {
+    top: 0px;
+  }
+}

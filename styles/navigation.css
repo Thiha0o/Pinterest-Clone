@@ -1,0 +1,138 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 72px;
+  /* background-color: gray; */
+  border-right: 1px solid rgb(228, 226, 226);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.navbar-section {
+  margin-top: 20px;
+}
+
+/* 7 Icons Container */
+.pinterest-icon-container,
+.home-icon-container,
+.compass-icon-container,
+.create-icon-container,
+.updates-icon-container,
+.messages-icon-container,
+.setting-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.15s;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+
+.pinterest-icon-container .tooltip,
+.home-icon-container .tooltip,
+.create-icon-container .tooltip,
+.updates-icon-container .tooltip,
+.messages-icon-container .tooltip,
+.setting-icon-container .tooltip {
+  position: absolute;
+  left: 43px;
+  font-size: 12px;
+  background-color: rgb(14, 14, 14);
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.pinterest-icon-container:hover .tooltip,
+.home-icon-container:hover .tooltip,
+.create-icon-container:hover .tooltip,
+.updates-icon-container:hover .tooltip,
+.messages-icon-container:hover .tooltip,
+.setting-icon-container:hover .tooltip {
+  opacity: 1;
+}
+
+/* Compass Icon Container */
+.compass-icon-container .tooltip {
+  position: absolute;
+  left: 43px;
+  font-size: 16px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 4px gainsboro;
+  color: black;
+  padding: 8px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.compass-icon-container:hover .tooltip,
+.compass-icon-container .tooltip:hover {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.compass-icon-container p {
+  padding: 8px 10px 8px 10px;
+  border-radius: 10px;
+}
+
+.compass-icon-container p:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+/* 7 Icons Hover Effect */
+.pinterest-icon-container:hover,
+.home-icon-container:hover,
+.compass-icon-container:hover,
+.create-icon-container:hover,
+.updates-icon-container:hover,
+.messages-icon-container:hover,
+.setting-icon-container:hover {
+  background-color: #f5f5f5;
+}
+
+.updates-count {
+  position: absolute;
+  background-color: rgb(229, 63, 63);
+  border-radius: 10px;
+  padding: 3px 3px 1px 3px;
+  font-size: 10px;
+  top: 3px;
+  right: 3px;
+  color: white;
+}
+
+.setting-section .setting-icon-container {
+  margin-bottom: 22px;
+}
+
+/* Responsive Nav Bar*/
+@media (max-width: 600px) {
+  .nav {
+    display: none;
+  }
+}

@@ -1,0 +1,96 @@
+.main {
+  width: 100%;
+}
+
+.pins {
+  display: flex;
+  gap: 0px 8px;
+  margin-top: -20px;
+  overflow: auto;
+  top: 80px;
+  position: sticky;
+  background-color: white;
+  z-index: 1;
+}
+
+.pins p {
+  position: relative;
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.15s;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap; /* white-space is useful when in Mobile Responsive */
+}
+
+/* Underline effect */
+.pins p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Push the underline below the text */
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+/* Show underline on hover */
+.pins p:hover::after {
+  transform: scaleX(1);
+}
+
+/* .pins p:hover {
+  background-color: rgb(220, 220, 220);
+} */
+
+/* Image */
+.layout-container {
+  width: min(2000px, 100%);
+  margin: 0 auto;
+  columns: 5 150px;
+  column-gap: 1em;
+}
+
+/* Wrapper around each image */
+.image-wrapper {
+  position: relative;
+  display: block;
+  margin-bottom: 1em;
+  border-radius: 20px;
+  overflow: hidden;
+  break-inside: avoid;
+  /* prevents column-break in the middle */
+}
+
+/* Actual image */
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Overlay effect */
+.image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(128, 128, 128, 0.4);
+  /* semi-transparent gray */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+/* Show overlay only on hovered image */
+.image-wrapper:hover::after {
+  opacity: 1;
+}
