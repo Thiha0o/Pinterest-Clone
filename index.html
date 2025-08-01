@@ -234,34 +234,20 @@
     </main>
 
     <!-- Mobile Nav Bar -->
-    <div class="mobile-nav-bar">
-      <div><img src="./icons/home-icon.png" alt="Home" /></div>
-      <div><img src="./icons/search-icon.png" alt="Search" /></div>
-      <div><img src="./icons/create-icon.png" alt="create" /></div>
-      <div><img src="./icons/messenges-icon.png" alt="messages" /></div>
-      <div>
-        <img class="profile-mobile" src="./profilepics/THO-2.jpg" alt="Home" />
+    <div class="mobile-view">
+      <div class="mobile-nav-bar">
+        <div><img src="./icons/home-icon.png" alt="Home" /></div>
+        <div><img src="./icons/search-icon.png" alt="Search" /></div>
+        <div><img src="./icons/create-icon.png" alt="create" /></div>
+        <div><img src="./icons/messenges-icon.png" alt="messages" /></div>
+        <div>
+          <img
+            class="profile-mobile"
+            src="./profilepics/THO-2.jpg"
+            alt="Home"
+          />
+        </div>
       </div>
-      <div><button id="darkModeToggle">🌙</button></div>
     </div>
-
-    <script>
-      const toggleButton = document.getElementById("darkModeToggle");
-      toggleButton.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-
-        // Optionally save preference to localStorage
-        const isDark = document.body.classList.contains("dark-mode");
-        localStorage.setItem("darkMode", isDark);
-      });
-
-      // Load dark mode preference on page load
-      window.addEventListener("DOMContentLoaded", () => {
-        const isDark = localStorage.getItem("darkMode") === "true";
-        if (isDark) {
-          document.body.classList.add("dark-mode");
-        }
-      });
-    </script>
   </body>
 </html>

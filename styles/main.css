@@ -4,9 +4,11 @@
 
 .pins {
   display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 0px 8px;
-  margin-top: -20px;
-  overflow: auto;
+  margin-top: -17px;
+  padding-left: 12px;
   top: 80px;
   position: sticky;
   background-color: white;
@@ -46,9 +48,9 @@
   transform: scaleX(1);
 }
 
-/* .pins p:hover {
+.pins p:hover {
   background-color: rgb(220, 220, 220);
-} */
+}
 
 /* Image */
 .layout-container {
